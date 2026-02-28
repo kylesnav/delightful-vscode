@@ -1,0 +1,49 @@
+{
+  "name": "delightful-theme",
+  "displayName": "Delightful",
+  "description": "A warm, neo-brutalist color theme from the Delightful Design System",
+  "version": "0.5.0",
+  "publisher": "kylesnav",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#fdf8f3",
+    "theme": "light"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "color-theme",
+    "warm",
+    "neo-brutalist",
+    "oklch",
+    "delightful"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Delightful Light",
+        "uiTheme": "vs",
+        "path": "./themes/delightful-light-color-theme.json"
+      },
+      {
+        "label": "Delightful Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/delightful-dark-color-theme.json"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kylesnav/delightful-vscode"
+  },
+  "homepage": "https://github.com/kylesnav/delightful-design-system",
+  "bugs": {
+    "url": "https://github.com/kylesnav/delightful-vscode/issues"
+  }
+}
