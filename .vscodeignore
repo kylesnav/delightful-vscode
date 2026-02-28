@@ -1,3 +1,6 @@
 scripts/
 node_modules/
 .gitignore
+*.vsix
+.DS_Store
+.conductor/

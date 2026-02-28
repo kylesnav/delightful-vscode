@@ -80,7 +80,7 @@ This theme is part of the [Delightful Design System](https://github.com/kylesnav
 
 | Layer | Purpose |
 |-------|---------|
-| **Primitives** | Raw OKLCH values — neutrals (0–950) and seven accent families |
+| **Primitives** | Raw OKLCH values — neutrals (0-950) and seven accent families |
 | **Semantic tokens** | Background, text, border, and accent colors for light/dark modes |
 | **Syntax tokens** | Dedicated dark-mode syntax palette for optimal readability |
 
