@@ -1,58 +1,54 @@
-# Delightful
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kylesnav/delightful-vscode/main/screenshots/VSCode-Dark.png" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kylesnav/delightful-vscode/main/screenshots/VSCode-Light.png" />
+    <img src="https://raw.githubusercontent.com/kylesnav/delightful-vscode/main/screenshots/VSCode-Light.png" width="600" alt="VS Code — Delightful" />
+  </picture>
+</p>
 
-A warm, neo-brutalist color theme for [Visual Studio Code](https://code.visualstudio.com), based on the [Delightful Design System](https://github.com/kylesnav/delightful-design-system).
+<h1 align="center">Delightful for VS Code</h1>
 
-## Features
+<p align="center">
+  A warm, neo-brutalist color theme for Visual Studio Code, derived from the <a href="https://github.com/kylesnav/delightful-design-system">Delightful Design System</a>.
+</p>
 
-- **Warm color palette** — OKLCH-based neutrals with a subtle warm tint (hue 70), never cold gray
-- **Neo-brutalist aesthetic** — Solid shadows, bold accents, and a warm visual language
-- **Light & dark variants** — Carefully tuned for both, with warm dark backgrounds and vibrant syntax
-- **Semantic highlighting** — Enhanced token colors for variables, types, parameters, and more
-- **7 accent color families** — Pink (primary), red (danger), gold (warning), cyan (info), green (success), purple (creative), and warm neutrals
-- **Complete terminal palette** — 16-color ANSI palette matching the design system
-- **Bracket pair colorization** — Using design system accent colors
-- **Full workbench theming** — Activity bar, sidebar, tabs, status bar, command palette, and every panel
+---
 
-## Installation
+## Variants
 
-### From VS Code Marketplace
+- **Delightful Light** — warm cream backgrounds with high-contrast accents
+- **Delightful Dark** — amber-tinted dark backgrounds with vibrant syntax colors
 
-1. Open VS Code
-2. Go to **Extensions** (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-3. Search for **"Delightful"**
-4. Click **Install**
-5. Open **Command Palette** (`Ctrl+Shift+P` / `Cmd+Shift+P`)
-6. Type **"Color Theme"** and select **Preferences: Color Theme**
-7. Choose **Delightful Light** or **Delightful Dark**
+## Install
 
-### From Open VSX (VS Codium, code-server, etc.)
-
-1. Open the Extensions panel
-2. Search for **"Delightful"**
-3. Click **Install**
-
-### Manual Install
+### Manual install
 
 ```bash
-# Download the .vsix from GitHub Releases
-code --install-extension delightful-theme-0.5.0.vsix
+npx @vscode/vsce package
+code --install-extension delightful-theme-*.vsix
+```
+
+### From source (development)
+
+```bash
+cd scripts
+npm install
+node generate-themes.mjs
+code --extensionDevelopmentPath=/path/to/vscode-theme
 ```
 
 ## Syntax Highlighting
 
-| Scope | Color | Token |
-|-------|-------|-------|
-| Keywords | Pink | `accent-primary` |
-| Strings | Gold | `accent-gold` |
-| Functions | Cyan | `accent-cyan` |
-| Comments | Muted neutral | `text-muted`, italic |
-| Numbers | Green | `accent-green` |
-| Properties | Soft pink | `pink-300` |
-| Types / Classes | Cyan (brighter) | `accent-cyan` |
-| Constants | Red | `accent-danger` |
-| Operators | Neutral | `text-secondary` |
-| Tags (HTML/JSX) | Pink | `accent-primary` |
-| Attributes | Gold | `accent-gold` |
+| Scope | Color |
+|-------|-------|
+| Keywords | Pink (brand accent) |
+| Strings | Gold |
+| Functions | Cyan |
+| Comments | Muted neutral, italic |
+| Numbers | Green |
+| Properties | Soft pink |
+| Types | Bright cyan |
+| Constants | Red |
 
 ## Color Palette
 
@@ -62,35 +58,18 @@ All colors are derived from the Delightful Design System's OKLCH tokens:
 |------|-------|------|
 | Background | Warm cream (`bg-surface`) | Amber-tinted dark (`bg-surface`) |
 | Text | Deep warm brown (`text-primary`) | Light cream (`text-primary`) |
-| Accent | Hot pink / fuchsia | Lighter pink |
+| Accent | Hot pink | Lighter pink |
 | Danger | Warm red | Bright red |
 | Warning | Gold | Gold |
 | Info | Cyan | Bright cyan |
 | Success | Green | Bright green |
 
-## Supported Languages
+## Regenerating
 
-Tested across: JavaScript, TypeScript, Python, Rust, Go, CSS, SCSS, HTML, JSX/TSX, JSON, Markdown, YAML, TOML, Shell/Bash, SQL, C/C++, Java, Ruby, PHP, Swift, Kotlin.
-
-## Design System
-
-This theme is part of the [Delightful Design System](https://github.com/kylesnav/delightful-design-system) — a comprehensive token system built on OKLCH color science with a neo-brutalist visual language.
-
-### Token Architecture
-
-| Layer | Purpose |
-|-------|---------|
-| **Primitives** | Raw OKLCH values — neutrals (0-950) and seven accent families |
-| **Semantic tokens** | Background, text, border, and accent colors for light/dark modes |
-| **Syntax tokens** | Dedicated dark-mode syntax palette for optimal readability |
-
-## Development
-
-Theme files are generated from OKLCH tokens:
+When design system tokens change, regenerate the theme files:
 
 ```bash
 cd scripts
-npm install
 node generate-themes.mjs
 ```
 
