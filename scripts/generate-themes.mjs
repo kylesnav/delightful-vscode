@@ -206,7 +206,7 @@ const dark = {
   // Syntax highlighting (dark mode — tuned for dark backgrounds,
   // from delightful-design-system.html:2792-2798)
   syntaxKeyword:  'oklch(0.750 0.200 350)',
-  syntaxString:   'oklch(0.870 0.160 85)',
+  syntaxString:   'oklch(0.870 0.165 85)',
   syntaxFunction: 'oklch(0.750 0.130 210)',
   syntaxComment:  'oklch(0.550 0.010 60)',
   syntaxNumber:   'oklch(0.800 0.140 148)',

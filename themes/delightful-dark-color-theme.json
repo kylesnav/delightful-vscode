@@ -366,7 +366,7 @@
         "string.quoted"
       ],
       "settings": {
-        "foreground": "#ffcc5a"
+        "foreground": "#ffcc59"
       }
     },
     {
@@ -467,7 +467,7 @@
         "entity.other.attribute-name"
       ],
       "settings": {
-        "foreground": "#ffcc5a"
+        "foreground": "#ffcc59"
       }
     },
     {
