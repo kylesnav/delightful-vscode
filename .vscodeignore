@@ -1,6 +1,10 @@
 scripts/
+screenshots/
 node_modules/
+.git/
 .gitignore
 *.vsix
+*.md
+!README.md
 .DS_Store
 .conductor/
